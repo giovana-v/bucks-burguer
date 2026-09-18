@@ -18,3 +18,5 @@ node_modules/
 .cache/
 tmp/
 .wrangler/
+
+# Bundles gerados por `npm run build` — a fonte está em src/

@@ -1156,6 +1156,54 @@
   transition: var(--transicao);
 }
 .mapa-card iframe:hover { filter: none; }
+
+/* Prévia do mapa (antes do clique) */
+.mapa-previa {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  max-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  background: var(--preto-3);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 6px;
+  color: var(--texto-suave);
+  overflow: hidden;
+  transition: var(--transicao);
+}
+.mapa-previa:hover { border-color: var(--dourado); color: var(--branco); }
+/* Malha de ruas sugerida em CSS: dá a leitura de "mapa" sem baixar
+   imagem nenhuma. */
+.mapa-previa__grade {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(115deg, transparent 46%, rgba(217,169,40,.16) 46%, rgba(217,169,40,.16) 52%, transparent 52%);
+  background-size: 34px 34px, 34px 34px, 100% 100%;
+}
+.mapa-previa__pino {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: var(--vermelho);
+  color: var(--branco);
+}
+.mapa-previa__rotulo {
+  position: relative;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 .mapa-card figcaption {
   text-align: center;
   font-size: .76rem;

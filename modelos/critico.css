@@ -539,6 +539,24 @@ p { margin: 0 0 1rem; }
 .produto { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .produto__principal { aspect-ratio: 4/3; position: relative; overflow: hidden; border-radius: var(--radius); }
 .foto-produto { width: 100%; height: 100%; object-fit: cover; background: var(--preto-2); }
+.mapa-card { margin: 0; display: grid; gap: 10px; }
+.mapa-previa {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  max-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  background: var(--preto-3);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 6px;
+  color: var(--texto-suave);
+  overflow: hidden;
+}
 .estado-vazio { grid-column: 1 / -1; padding: 48px 20px; text-align: center; color: var(--texto-fraco); font-size: .9rem; }
 
 /* Busca e filtros do cardápio: ficam acima da grade, então qualquer

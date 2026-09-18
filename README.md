@@ -27,15 +27,19 @@ Site estático — HTML, CSS e JavaScript puros, sem framework e sem build.
 Basta abrir os arquivos de `public/` em qualquer servidor.
 
 ```
-public/         o site publicado
-  css/ js/      estilos e scripts
-  data/         produtos.json — o cardápio
-  assets/       imagens e fontes
-modelos/        CSS crítico e modelo do sitemap
-ferramentas/    scripts de build (CSS e fotos)
-fotos-originais/ fotos antes de virarem WebP
-tests/          testes das regras de negócio
+src/css/ src/js/   o código que você edita
+public/            o site publicado (css/site.css e js/site.js são gerados)
+  data/            produtos.json — o cardápio
+  assets/          imagens e fontes
+modelos/           CSS crítico
+ferramentas/       scripts de build (CSS+JS, fotos, fontes)
+fotos-originais/   fotos antes de virarem WebP
+fontes-originais/  fontes antes de serem reduzidas
+tests/             testes das regras de negócio
 ```
+
+**Edite em `src/`, nunca em `public/css/site.css` ou `public/js/site.js`** —
+esses dois são gerados e sobrescritos a cada `npm run build`.
 
 O cardápio inteiro vem de `public/data/produtos.json` e os dados da loja
 (contato, endereço, horário, entrega) de `public/js/config.js`. Para mudar
@@ -59,16 +63,22 @@ npx serve public     # abre o site localmente
 3. Aponte o campo `imagem` do produto em `produtos.json` para o arquivo
    `-800.webp` gerado
 
-### Editar o CSS
+### Editar CSS ou JavaScript
 
-As três folhas de `public/css/` viram um `site.css` só, e
-`modelos/critico.css` é colado dentro do `<head>` de cada página para a
-primeira tela aparecer sem esperar download. Depois de editar qualquer
-CSS:
+O build junta e minifica `src/css/` num `public/css/site.css` e `src/js/`
+num `public/js/site.js`, e cola `modelos/critico.css` dentro do `<head>`
+de cada página para a primeira tela aparecer sem esperar download.
+Depois de editar qualquer coisa em `src/`:
 
 ```bash
 npm run build
 ```
+
+### Trocar uma fonte
+
+Ponha o `.woff2` original em `fontes-originais/` e rode `npm run fontes`.
+O script corta os caracteres que o site não usa e fixa o eixo de peso
+das fontes decorativas — as seis fontes caem de 257 KB para 86 KB.
 
 ---
 

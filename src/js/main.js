@@ -208,13 +208,62 @@ function renderizarEndereco() {
     el.href = rota;
   });
 
-  const embed = Loja.urlMapaEmbed(a);
-  document.querySelectorAll('[data-mapa-embed]').forEach(el => {
-    const cartao = el.closest('.mapa-card');
-    if (!embed) { cartao?.remove(); return; }
-    el.src = embed;
-    if (cartao) cartao.hidden = false;
-  });
+  montarMapa(Loja.urlMapaEmbed(a));
+}
+
+/* ---------- Mapa sob demanda ----------
+   O embed do Google traz ~450 KiB de JavaScript (main.js, places,
+   controls, map...). Isso é mais que o site inteiro, para um mapa que
+   a maioria das pessoas nem rola até ver.
+
+   Então a página nasce com uma prévia estática, feita em CSS, e o
+   iframe de verdade só entra quando alguém clica. Quem só quer o
+   caminho continua tendo o link "Como chegar" logo acima, que não
+   custa um byte de JavaScript. */
+function montarMapa(embed) {
+  const botao = document.querySelector('[data-mapa-abrir]');
+  const cartao = botao?.closest('.mapa-card');
+  if (!botao || !cartao) return;
+
+  if (!embed) { cartao.remove(); return; }
+
+  botao.hidden = false;
+  cartao.hidden = false;
+
+  const carregar = () => {
+    const iframe = document.createElement('iframe');
+    iframe.title = "Mapa da Buck's Burguer";
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.loading = 'lazy';
+    iframe.src = embed;
+    botao.replaceWith(iframe);
+    /* O clique abriu o mapa; quem usa teclado esperaria continuar de
+       onde estava, e o botão que tinha o foco acabou de sair do DOM. */
+    iframe.focus?.();
+  };
+
+  botao.addEventListener('click', carregar, { once: true });
+
+  /* Quando a prévia se aproxima da tela, abrimos a conexão com os
+     servidores do Google por antecipação. Não baixa o mapa: só paga
+     o DNS e o handshake TLS adiantado, para o clique responder logo.
+     Preconnect fixo no <head> seria pior — reservaria a conexão já no
+     carregamento, competindo com o que a primeira tela precisa. */
+  if (!('IntersectionObserver' in window)) return;
+
+  const observador = new IntersectionObserver((entradas, obs) => {
+    if (!entradas.some(e => e.isIntersecting)) return;
+    obs.disconnect();
+    for (const origem of ['https://www.google.com', 'https://maps.googleapis.com', 'https://maps.gstatic.com']) {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = origem;
+      link.crossOrigin = '';
+      document.head.appendChild(link);
+    }
+  }, { rootMargin: '400px' });
+
+  observador.observe(cartao);
 }
 
 /* ---------- Contatos ---------- */

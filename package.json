@@ -6,10 +6,13 @@
     "test": "node tests/testes.js",
     "build": "node ferramentas/construir.js",
     "fotos": "node ferramentas/preparar-fotos.js",
-    "publicar": "npm run build && npm test && npx wrangler pages deploy public --project-name bucks-burguer --branch main --commit-dirty=true"
+    "publicar": "npm run build && npm test && npx wrangler pages deploy public --project-name bucks-burguer --branch main --commit-dirty=true",
+    "fontes": "node ferramentas/preparar-fontes.js"
   },
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "sharp": "^0.34.0",
+    "subset-font": "^2.7.0",
     "wrangler": "^4.0.0"
   }
 }

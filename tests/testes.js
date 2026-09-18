@@ -1,7 +1,7 @@
 /* TESTES das regras de negócio. Rodar com: npm test */
 
-const { Loja } = require('../public/js/loja.js');
-const { BUSINESS_CONFIG } = require('../public/js/config.js');
+const { Loja } = require('../src/js/loja.js');
+const { BUSINESS_CONFIG } = require('../src/js/config.js');
 
 let passou = 0, falhou = 0;
 const falhas = [];
@@ -784,7 +784,7 @@ teste('nenhum link interno do site ainda usa .html', () => {
   const fs = require('fs');
   const arquivos = [
     ...fs.readdirSync('public').filter(f => f.endsWith('.html')).map(f => 'public/' + f),
-    ...fs.readdirSync('public/js').map(f => 'public/js/' + f)
+    ...fs.readdirSync('src/js').map(f => 'src/js/' + f)
   ];
   const sobras = [];
   for (const arq of arquivos) {
@@ -883,7 +883,7 @@ teste('o selo de status nasce oculto, para não virar caixa vazia', () => {
 });
 
 teste('.form__erro tem uma única regra base, sem conflito de cascata', () => {
-  const css = fs.readFileSync('public/css/components.css', 'utf8');
+  const css = fs.readFileSync('src/css/components.css', 'utf8');
   const base = (css.match(/^\.form__erro\s*\{/gm) || []).length;
   igual(base, 1, 'duas declarações base voltariam a mostrar erro ao abrir a página');
   contem(css, '.form__erro:empty { display: none; }');
