@@ -1,0 +1,29 @@
+# ============================================================
+# Buck's Burguer — robots.txt
+# ============================================================
+# Libera a indexação das páginas públicas e mantém acessíveis
+# os arquivos que o Google precisa para renderizar o site
+# (CSS, JS e imagens). Bloquear esses arquivos prejudica o
+# ranqueamento.
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Página de erro não deve ser indexada
+Disallow: /404.html
+
+# Arquivos de desenvolvimento: ficam acessíveis, mas fora do índice
+Disallow: /tests/
+Disallow: /README.md
+Disallow: /TESTES.md
+
+# ------------------------------------------------------------
+# TODO: quando houver domínio oficial, copiar
+# modelos/sitemap.template.xml para public/sitemap.xml, trocar
+# SEU-DOMINIO e descomentar a linha abaixo.
+# O modelo fica fora de public/ de propósito: um sitemap com
+# domínio falso no ar gera erro no Search Console.
+#
+# Sitemap: https://SEU-DOMINIO/sitemap.xml
+# ------------------------------------------------------------

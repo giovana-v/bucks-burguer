@@ -1,0 +1,288 @@
+{
+  "_alergenos": {
+    "_leiaMe": "Campos de alérgenos por produto. AMBOS SÃO OPCIONAIS: produtos sem eles continuam funcionando e o site simplesmente não exibe nada sobre alérgenos. Preenchidos, o site passa a mostrar 'Contém: ...' no card, no modal e na página do produto. O site NUNCA afirma que um produto é livre de algo que não foi cadastrado aqui.",
+    "_comoPreencher": {
+      "alergenos": "Lista de textos. Use os termos de _vocabulario. Lista vazia [] significa 'conferido, nenhum alérgeno'. Ausente/null significa 'ainda não conferido'.",
+      "avisoContaminacaoCruzada": "true quando o item é preparado em superfície/fritadeira compartilhada. Exibe 'Consulte a equipe sobre contaminação cruzada'."
+    },
+    "_vocabulario": [
+      "glúten",
+      "lactose",
+      "ovo",
+      "soja",
+      "castanhas",
+      "amendoim",
+      "peixe",
+      "crustáceos",
+      "gergelim"
+    ],
+    "_exemploEstrutura": {
+      "_aviso": "EXEMPLO ILUSTRATIVO — não corresponde a nenhum produto real da loja.",
+      "alergenos": [
+        "glúten",
+        "lactose",
+        "ovo"
+      ],
+      "avisoContaminacaoCruzada": false
+    },
+    "_pendencia": "TODO: nenhum produto tem alérgenos confirmados ainda. Preencha produto a produto junto com a cozinha antes de divulgar."
+  },
+  "categorias": [
+    {
+      "id": "todos",
+      "nome": "Todos"
+    },
+    {
+      "id": "burgers",
+      "nome": "Burgers"
+    },
+    {
+      "id": "combos",
+      "nome": "Combos"
+    },
+    {
+      "id": "acompanhamentos",
+      "nome": "Acompanhamentos"
+    },
+    {
+      "id": "bebidas",
+      "nome": "Bebidas"
+    },
+    {
+      "id": "sobremesas",
+      "nome": "Sobremesas"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "The King",
+      "categoria": "burgers",
+      "preco": 42.9,
+      "precoAntigo": 49.9,
+      "tag": "Mais vendido",
+      "tagCor": "dourado",
+      "descricao": "Dois smash de 160g, cheddar duplo, bacon crocante, cebola caramelizada e molho da casa no pão brioche.",
+      "ingredientes": [
+        "2x Blend 160g",
+        "Cheddar duplo",
+        "Bacon crocante",
+        "Cebola caramelizada",
+        "Molho Buck's",
+        "Pão brioche"
+      ],
+      "imagem": "assets/images/produtos/the-king-800.webp"
+    },
+    {
+      "id": 2,
+      "nome": "Buck's Classic",
+      "categoria": "burgers",
+      "preco": 32.9,
+      "precoAntigo": null,
+      "tag": "Clássico",
+      "tagCor": "vermelho",
+      "descricao": "Blend artesanal 160g, queijo prato, alface americana, tomate e maionese defumada.",
+      "ingredientes": [
+        "Blend 160g",
+        "Queijo prato",
+        "Alface americana",
+        "Tomate",
+        "Maionese defumada",
+        "Pão brioche"
+      ],
+      "imagem": "assets/images/produtos/classic-800.webp"
+    },
+    {
+      "id": 3,
+      "nome": "Smoky Bacon",
+      "categoria": "burgers",
+      "preco": 38.9,
+      "precoAntigo": null,
+      "tag": null,
+      "tagCor": null,
+      "descricao": "Blend 160g defumado na lenha, triplo bacon, cheddar cremoso e barbecue artesanal.",
+      "ingredientes": [
+        "Blend 160g defumado",
+        "Triplo bacon",
+        "Cheddar cremoso",
+        "Barbecue artesanal",
+        "Pão australiano"
+      ],
+      "imagem": "assets/images/produtos/smoky-bacon-800.webp"
+    },
+    {
+      "id": 4,
+      "nome": "Green Crown",
+      "categoria": "burgers",
+      "preco": 34.9,
+      "precoAntigo": null,
+      "tag": "Veggie",
+      "tagCor": "verde",
+      "descricao": "Hambúrguer de grão-de-bico e beterraba, queijo vegano, rúcula, tomate seco e maionese de ervas.",
+      "ingredientes": [
+        "Burger de grão-de-bico",
+        "Queijo vegano",
+        "Rúcula",
+        "Tomate seco",
+        "Maionese de ervas",
+        "Pão integral"
+      ],
+      "imagem": "assets/images/produtos/green-crown-800.webp"
+    },
+    {
+      "id": 5,
+      "nome": "Double Fire",
+      "categoria": "burgers",
+      "preco": 44.9,
+      "precoAntigo": null,
+      "tag": "Picante",
+      "tagCor": "vermelho",
+      "descricao": "Dois blends 160g, pepper jack, jalapeño, cebola roxa e molho chipotle picante.",
+      "ingredientes": [
+        "2x Blend 160g",
+        "Pepper jack",
+        "Jalapeño",
+        "Cebola roxa",
+        "Molho chipotle",
+        "Pão brioche"
+      ],
+      "imagem": null
+    },
+    {
+      "id": 6,
+      "nome": "Combo Coroa",
+      "categoria": "combos",
+      "preco": 59.9,
+      "precoAntigo": 72.8,
+      "tag": "Economize 18%",
+      "tagCor": "dourado",
+      "descricao": "The King + fritas rústicas grandes + refrigerante 500ml. O combo que manda.",
+      "ingredientes": [
+        "The King",
+        "Fritas rústicas grandes",
+        "Refrigerante 500ml"
+      ],
+      "imagem": null
+    },
+    {
+      "id": 7,
+      "nome": "Combo Duplo",
+      "categoria": "combos",
+      "preco": 98.9,
+      "precoAntigo": 119.8,
+      "tag": "Para dois",
+      "tagCor": "vermelho",
+      "descricao": "2 burgers à escolha + 2 fritas médias + 2 bebidas. Perfeito para dividir.",
+      "ingredientes": [
+        "2 burgers à escolha",
+        "2 fritas médias",
+        "2 bebidas"
+      ],
+      "imagem": null
+    },
+    {
+      "id": 8,
+      "nome": "Fritas Rústicas",
+      "categoria": "acompanhamentos",
+      "preco": 19.9,
+      "precoAntigo": null,
+      "tag": null,
+      "tagCor": null,
+      "descricao": "Batatas com casca, sal grosso e alecrim, servidas com maionese da casa.",
+      "ingredientes": [
+        "Batata com casca",
+        "Sal grosso",
+        "Alecrim",
+        "Maionese da casa"
+      ],
+      "imagem": null
+    },
+    {
+      "id": 9,
+      "nome": "Onion Rings",
+      "categoria": "acompanhamentos",
+      "preco": 22.9,
+      "precoAntigo": null,
+      "tag": null,
+      "tagCor": null,
+      "descricao": "Anéis de cebola empanados na cerveja preta, crocantes por fora e macios por dentro.",
+      "ingredientes": [
+        "Cebola",
+        "Empanado de cerveja preta",
+        "Molho barbecue"
+      ],
+      "imagem": null
+    },
+    {
+      "id": 10,
+      "nome": "Milkshake Ouro",
+      "categoria": "sobremesas",
+      "preco": 24.9,
+      "precoAntigo": null,
+      "tag": "Novidade",
+      "tagCor": "dourado",
+      "descricao": "Milkshake de doce de leite com caramelo salgado e chantilly.",
+      "ingredientes": [
+        "Sorvete de doce de leite",
+        "Caramelo salgado",
+        "Chantilly"
+      ],
+      "imagem": null
+    },
+    {
+      "id": 11,
+      "nome": "Refrigerante Lata",
+      "categoria": "bebidas",
+      "preco": 8.9,
+      "precoAntigo": null,
+      "tag": null,
+      "tagCor": null,
+      "descricao": "Lata 350ml gelada. Consulte os sabores disponíveis.",
+      "ingredientes": [
+        "Lata 350ml"
+      ],
+      "imagem": null
+    },
+    {
+      "id": 12,
+      "nome": "Cerveja Artesanal",
+      "categoria": "bebidas",
+      "preco": 18.9,
+      "precoAntigo": null,
+      "tag": null,
+      "tagCor": null,
+      "descricao": "IPA da casa, 500ml, produzida em parceria com cervejaria local.",
+      "ingredientes": [
+        "IPA 500ml"
+      ],
+      "imagem": null
+    }
+  ],
+  "adicionais": [
+    {
+      "id": "bacon",
+      "nome": "Bacon extra",
+      "preco": 7.0
+    },
+    {
+      "id": "cheddar",
+      "nome": "Cheddar extra",
+      "preco": 6.0
+    },
+    {
+      "id": "burger",
+      "nome": "Carne extra 160g",
+      "preco": 14.0
+    },
+    {
+      "id": "ovo",
+      "nome": "Ovo frito",
+      "preco": 4.0
+    },
+    {
+      "id": "cebola",
+      "nome": "Cebola caramelizada",
+      "preco": 5.0
+    }
+  ]
+}

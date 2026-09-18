@@ -1,0 +1,165 @@
+/* GLOBAL — tokens da marca, base tipográfica e utilitários */
+
+:root {
+  /* Paleta da marca */
+  --preto:        #0B0B0B;
+  --preto-2:      #141414;
+  --preto-3:      #1C1C1C;
+  --vermelho:     #C51F28;   /* fundos, botões, bordas, badges */
+  --vermelho-texto: #E85D64;
+  --vermelho-esc: #8E141B;
+  --branco:       #FFFFFF;
+  --dourado:      #D9A928;
+  --dourado-esc:  #A67F17;
+  --verde:        #567B32;
+  --marrom:       #713A22;
+
+  /* Texto */
+  --texto:        #F2F2F2;
+  --texto-suave:  #B9B9B9;
+  --texto-fraco:  #8A8A8A;   /* 4,94:1 sobre #1C1C1C (o antigo #7E7E7E dava 4,20:1) */
+
+  /* Tipografia */
+  --fonte-titulo: 'Anton', 'Arial Black', sans-serif;
+  --fonte-texto:  'Montserrat', system-ui, sans-serif;
+  --fonte-script: 'Caveat', 'Segoe Script', cursive;
+
+  /* Layout */
+  --container:    1200px;
+  --gutter:       24px;   /* recuo lateral do .container e do trilho social */
+  --radius:       10px;
+  --radius-sm:    6px;
+  --header-h:     84px;
+
+  /* Efeitos */
+  --transicao:    .2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--preto);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin: 0 0 .5em;
+  line-height: 1.05;
+}
+
+h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+
+p { margin: 0 0 1rem; }
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.secao { padding: 96px 0; position: relative; }
+.secao--escura { background: var(--preto-2); }
+.secao--vermelha { background: var(--vermelho); }
+
+/* ---------- Títulos de seção ---------- */
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.titulo-secao .selo {
+  display: inline-block;
+  font-family: var(--fonte-texto);
+  font-weight: 800;
+  font-size: .78rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 12px;
+}
+.titulo-secao h2 { margin-bottom: .3em; }
+.titulo-secao h2 em {
+  font-style: normal;
+  color: var(--vermelho);
+}
+.titulo-secao p {
+  color: var(--texto-suave);
+  max-width: 560px;
+  margin-inline: auto;
+}
+.titulo-secao::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 22px auto 0;
+  background: var(--vermelho);
+  border-radius: 2px;
+}
+
+/* ---------- Utilitários ---------- */
+.texto-dourado { color: var(--dourado); }
+.texto-vermelho { color: var(--vermelho); }
+.centro { text-align: center; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Texturas de fundo ---------- */
+.fundo-tijolo {
+  background-color: var(--preto);
+  background-image:
+    linear-gradient(rgba(11,11,11,.86), rgba(11,11,11,.94)),
+    var(--img-tijolo, none);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Animação de entrada ---------- */
+.revelar {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.revelar.visivel {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--preto-2); }
+::-webkit-scrollbar-thumb { background: var(--vermelho-esc); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--vermelho); }
+
+::selection { background: var(--vermelho); color: var(--branco); }

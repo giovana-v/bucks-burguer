@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================
+  MODELO DE SITEMAP — NÃO PUBLIQUE ASSIM
+  ============================================================
+  Este arquivo é um template. O domínio abaixo (SEU-DOMINIO) é
+  um marcador, não um endereço real.
+
+  ANTES DE PUBLICAR:
+    1. Substitua TODAS as ocorrências de SEU-DOMINIO pelo domínio
+       real (o mesmo valor de BUSINESS_CONFIG.siteUrl).
+    2. Atualize <lastmod> para a data de publicação.
+    3. Descomente a linha Sitemap: em robots.txt.
+
+  Não foram incluídas: 404.html (não indexável) e produto.html
+  (página dinâmica que depende do parâmetro ?id=; se quiser
+  indexá-la, gere uma entrada por produto do produtos.json).
+  ============================================================
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://SEU-DOMINIO/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://SEU-DOMINIO/cardapio.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://SEU-DOMINIO/contato.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

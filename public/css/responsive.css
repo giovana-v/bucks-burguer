@@ -1,0 +1,184 @@
+/* RESPONSIVO — ajustes por largura de tela */
+
+/* ============================================
+   BUCK'S BURGUER — RESPONSIVO
+   ============================================ */
+
+/* ---------- Até 1024px ---------- */
+@media (max-width: 1360px) {
+  .hero-v2 .container { padding-left: 80px; }
+}
+
+@media (max-width: 1100px) {
+  .carrossel__trilho { grid-auto-columns: calc(33.333% - 16px); }
+  .titulo-risco::before { display: none; }
+}
+
+@media (max-width: 1024px) {
+  .secao { padding: 72px 0; }
+
+  .sobre { grid-template-columns: 1fr; gap: 40px; }
+  .produto { grid-template-columns: 1fr; gap: 40px; }
+  .contato { grid-template-columns: 1fr; gap: 40px; }
+
+  .hero-v2 { padding-bottom: 110px; }
+  .hero-v2__inner { grid-template-columns: 1fr; gap: 24px; }
+  .fita, .fita__lista { display: none; }
+  .social-rail { bottom: 24px; }
+
+  .horarios-grade { grid-template-columns: 1fr; gap: 36px; }
+  .mapa-card iframe { max-height: 250px; }
+
+  .reservas { padding: 60px 0; }
+  .reservas__inner { grid-template-columns: 1fr; gap: 28px; justify-items: center; }
+  .colagem { max-width: 300px; }
+
+  .delivery__grade { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+
+  .footer-v2__grade { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  .menu-toggle { display: block; }
+
+  .nav {
+    position: fixed;
+    top: var(--header-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 24px 28px;
+    background: rgba(11,11,11,.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 3px solid var(--vermelho);
+    transform: translateY(-140%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .3s ease, opacity .3s ease, visibility .3s;
+  }
+  .nav.aberto { transform: none; opacity: 1; visibility: visible; }
+  .nav__link {
+    padding: 16px 0;
+    font-size: .95rem;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+  .nav__link::after { display: none; }
+
+  .header.rolado .nav { top: 68px; }
+
+  .carrossel__trilho { grid-auto-columns: calc(50% - 12px); }
+
+  .header .status-loja { display: none; }
+}
+
+@media (max-width: 640px) {
+  :root { --header-h: 72px; }
+
+  body { font-size: 15px; }
+  :root { --gutter: 18px; }
+  .secao { padding: 56px 0; }
+
+  .titulo-secao { margin-bottom: 36px; }
+
+  .hero { min-height: auto; padding-block: calc(var(--header-h) + 48px) 56px; }
+  .hero__midia .ph { min-height: 260px; }
+
+  .btn { padding: 13px 24px; font-size: .76rem; }
+  .hero__acoes .btn { flex: 1 1 100%; }
+
+  .grade-produtos { grid-template-columns: 1fr; gap: 20px; }
+
+  .produto__preco { font-size: 2rem; }
+  .produto__compra .btn { flex: 1 1 100%; }
+
+  .form__linha { grid-template-columns: 1fr; }
+
+  .carrinho { width: 100%; border-left: 0; }
+
+  .topo-pagina { padding: calc(var(--header-h) + 52px) 0 52px; }
+
+  .faixa__item { font-size: .9rem; gap: 28px; }
+  .faixa__trilho { gap: 28px; }
+
+  .toast { left: 18px; right: 18px; transform: translateY(130%); width: auto; text-align: center; }
+  .toast.visivel { transform: none; }
+
+  .hero-v2 { min-height: 88vh; padding: calc(var(--header-h) + 36px) 0 120px; }
+  .hero-v2__veu {
+    background:
+      linear-gradient(180deg,
+        rgba(11,11,11,.92) 0%,
+        rgba(11,11,11,.72) 42%,
+        rgba(11,11,11,.55) 62%,
+        rgba(11,11,11,.95) 100%);
+  }
+  .hero-v2__foto { object-position: 72% center; }
+  .hero-v2__titulo { text-shadow: 3px 4px 0 rgba(197,31,40,.85); }
+  .hero-v2__script { display: block; margin: 8px 0 0; }
+  .hero-v2__nota { display: none; }
+  .social-rail { left: 10px; gap: 8px; }
+  .hero-v2 .container { padding-left: 54px; }
+
+  .semana, .horarios-sec, .delivery { padding: 56px 0; }
+  .carrossel { gap: 10px; }
+  .carrossel__seta { width: 38px; height: 38px; }
+  .carrossel__trilho { grid-auto-columns: 78%; gap: 16px; }
+
+  .horarios-cols { grid-template-columns: 1fr; gap: 24px; }
+  /* Empilhado, o fio vertical vira um fio horizontal */
+  .bloco-info--divisor {
+    padding: 22px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255,255,255,.16);
+  }
+  .mapa-card iframe { aspect-ratio: 4 / 3; max-height: 260px; }
+
+  .reservas { padding: 48px 0; }
+  .colagem { max-width: 260px; border-width: 5px; }
+
+  .footer-v2 { padding-top: 48px; }
+  .footer-v2__grade { grid-template-columns: 1fr; gap: 30px; padding-bottom: 32px; }
+  .footer-v2__contatos { flex-direction: column; gap: 14px; }
+  .footer-v2__info { grid-template-columns: 1fr; gap: 20px; }
+  .footer-v2__base .container { justify-content: center; text-align: center; }
+
+  .dialogo {
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0;
+    margin-top: auto;      /* diálogo sobe de baixo, padrão mobile */
+  }
+  .dialogo__caixa,
+  .dialogo .checkout {
+    max-height: 100vh;
+    border-radius: 14px 14px 0 0;
+  }
+  .dialogo__corpo,
+  .checkout__corpo { padding: 18px; }
+  .dialogo__topo, .checkout__topo { padding: 16px 18px; }
+  .dialogo__rodape, .checkout__rodape {
+    padding: 14px 18px calc(14px + env(safe-area-inset-bottom));
+    flex-wrap: wrap;
+  }
+  .dialogo__rodape .seletor-qtd { flex: 1 1 100%; justify-content: center; }
+  .opcoes--grade { grid-template-columns: 1fr 1fr; }
+  .form__linha--rua { grid-template-columns: 1fr; }
+  .status-loja small { display: inline; margin-left: 6px; }
+}
+
+@media (max-width: 400px) {
+  .logo__sub { letter-spacing: 3px; }
+  .logo__marca { width: 44px; height: 44px; }
+}
+
+@media (max-width: 380px) {
+  .opcoes--grade { grid-template-columns: 1fr; }
+}
+
+@media print {
+  .header, .footer, .carrinho, .overlay, .toast, .faixa { display: none !important; }
+  body { background: #fff; color: #000; }
+}
+

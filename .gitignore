@@ -1,0 +1,20 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependências das ferramentas de autoria (sharp, wrangler).
+# O site publicado não usa nenhuma: continua HTML, CSS e JS puros.
+node_modules/
+
+# Logs e temporários
+*.log
+.cache/
+tmp/
+.wrangler/

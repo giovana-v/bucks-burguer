@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Buck's Burguer — Hamburgueria artesanal</title>
+<meta name="description" content="Hamburgueria artesanal Buck's Burguer. Blend próprio, pão brioche e ingredientes selecionados. Peça pelo site e receba em casa ou retire no balcão.">
+
+<meta property="og:site_name" content="Buck's Burguer">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Buck's Burguer — Hamburgueria artesanal">
+<meta property="og:description" content="Hamburgueria artesanal Buck's Burguer. Blend próprio, pão brioche e ingredientes selecionados. Peça pelo site e receba em casa ou retire no balcão.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buck's Burguer — Hamburgueria artesanal">
+<meta name="twitter:description" content="Hamburgueria artesanal Buck's Burguer. Blend próprio, pão brioche e ingredientes selecionados. Peça pelo site e receba em casa ou retire no balcão.">
+<meta name="theme-color" content="#0B0B0B">
+
+<link rel="icon" href="assets/images/logo.webp">
+
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/anton-latin.woff2" crossorigin>
+
+<link rel="preload" as="image"
+      href="assets/images/hero-banner.webp"
+      imagesrcset="assets/images/hero-banner-688.webp 688w, assets/images/hero-banner.webp 1376w"
+      imagesizes="100vw" fetchpriority="high">
+
+<!-- CRITICO:INICIO -->
+<style>@font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/anton-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/anton-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 800;font-display:swap;src:url(/assets/fonts/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 800;font-display:swap;src:url(/assets/fonts/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Caveat';font-style:normal;font-weight:500 700;font-display:swap;src:url(/assets/fonts/caveat-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Caveat';font-style:normal;font-weight:500 700;font-display:swap;src:url(/assets/fonts/caveat-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}:root{--preto:#0B0B0B;--preto-2:#141414;--preto-3:#1C1C1C;--vermelho:#C51F28;--vermelho-texto:#E85D64;--vermelho-esc:#8E141B;--branco:#FFFFFF;--dourado:#D9A928;--dourado-esc:#A67F17;--verde:#567B32;--marrom:#713A22;--texto:#F2F2F2;--texto-suave:#B9B9B9;--texto-fraco:#8A8A8A;--fonte-titulo:'Anton','Arial Black',sans-serif;--fonte-texto:'Montserrat',system-ui,sans-serif;--fonte-script:'Caveat','Segoe Script',cursive;--container:1200px;--gutter:24px;--radius:10px;--radius-sm:6px;--header-h:84px;--transicao:.2s ease}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--preto);color:var(--texto);font-family:var(--fonte-texto);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}ul{list-style:none;margin:0;padding:0}h1,h2,h3,h4{font-family:var(--fonte-titulo);font-weight:400;letter-spacing:.5px;text-transform:uppercase;margin:0 0 .5em;line-height:1.05}h1{font-size:clamp(2.6rem,6vw,4.6rem)}h2{font-size:clamp(2rem,4.2vw,3.2rem)}h3{font-size:clamp(1.2rem,2vw,1.6rem)}p{margin:0 0 1rem}.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}.secao{padding:96px 0;position:relative}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}.pular-para-conteudo{position:absolute;left:12px;top:-60px;z-index:300;padding:12px 20px;background:var(--dourado);color:var(--preto);font-weight:800;font-size:.8rem;border-radius:0 0 6px 6px;transition:top .2s ease}.pular-para-conteudo:focus{top:0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 34px;font-family:var(--fonte-texto);font-weight:800;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;border:2px solid transparent;border-radius:4px;transition:var(--transicao);white-space:nowrap}.btn--primario{background:var(--vermelho);color:var(--branco);border-color:var(--vermelho)}.btn--fantasma{background:transparent;color:var(--branco);border-color:rgba(255,255,255,.35)}.btn--claro{background:var(--branco);color:var(--preto);border-color:var(--branco);padding:16px 40px}.header{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--header-h);display:flex;align-items:center;background:rgba(11,11,11,.55);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:var(--transicao)}.header.rolado{height:68px;background:rgba(11,11,11,.97);border-bottom-color:var(--vermelho)}.header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%}.logo{display:flex;align-items:center;gap:12px}.logo__marca{width:52px;height:52px;flex:none;object-fit:cover;border:2px solid var(--vermelho);border-radius:50%;background:var(--preto);transition:var(--transicao)}.logo__texto{display:flex;flex-direction:column;line-height:1}.logo__nome{font-family:var(--fonte-titulo);font-size:1.3rem;color:var(--branco);letter-spacing:1px}.logo__sub{font-size:.6rem;font-weight:700;letter-spacing:5px;color:var(--dourado);text-transform:uppercase}.nav{display:flex;align-items:center;gap:34px}.nav__link{position:relative;font-size:.8rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--texto-suave);padding:6px 0;transition:var(--transicao)}.header__acoes{display:flex;align-items:center;gap:14px}.carrinho-btn{position:relative;width:46px;height:46px;display:grid;place-items:center;background:transparent;border:2px solid rgba(255,255,255,.2);border-radius:50%;color:var(--branco);transition:var(--transicao)}.carrinho-btn__contador{position:absolute;top:-6px;right:-6px;min-width:22px;height:22px;padding:0 5px;display:grid;place-items:center;background:var(--vermelho);color:var(--branco);font-size:.68rem;font-weight:800;border-radius:11px;border:2px solid var(--preto)}.menu-toggle{display:none;width:44px;height:44px;background:none;border:0;padding:0;position:relative}.menu-toggle span{position:absolute;left:10px;width:24px;height:2px;background:var(--branco);transition:var(--transicao)}.menu-toggle span:nth-child(1){top:15px}.menu-toggle span:nth-child(2){top:21px}.menu-toggle span:nth-child(3){top:27px}.status-loja{display:inline-flex;align-items:center;gap:8px;margin:0;font-size:.72rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--texto-suave);white-space:nowrap}.status-loja__ponto{width:9px;height:9px;flex:none;border-radius:50%;background:var(--texto-fraco)}.hero-v2{position:relative;min-height:88vh;display:flex;align-items:center;padding:calc(var(--header-h) + 56px) 0 120px;overflow:hidden}.hero-v2__foto{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:68% center}.hero-v2__veu{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,11,11,.96) 0%,rgba(11,11,11,.90) 38%,rgba(11,11,11,.45) 64%,rgba(11,11,11,.22) 100%),linear-gradient(180deg,rgba(11,11,11,.55) 0%,rgba(11,11,11,0) 28%,rgba(11,11,11,0) 72%,rgba(11,11,11,.85) 100%)}.hero-v2__inner{position:relative;z-index:3;display:grid;grid-template-columns:minmax(0,560px);align-items:center;gap:20px;width:100%}.hero-v2__h1{margin:0 0 22px;text-transform:none}.hero-v2__marca,.hero-v2__titulo{display:block}.hero-v2__marca{font-family:var(--fonte-titulo);font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--branco);letter-spacing:2px;line-height:1}.hero-v2__script{display:inline-block;margin-left:20px;text-transform:none;font-family:var(--fonte-script);font-size:clamp(1.4rem,2.4vw,2rem);color:var(--branco);letter-spacing:0;transform:rotate(-3deg)}.hero-v2__titulo{font-family:var(--fonte-titulo);font-size:clamp(3.4rem,8vw,6rem);line-height:.95;color:var(--dourado);margin:6px 0 22px;letter-spacing:3px;text-shadow:4px 5px 0 rgba(197,31,40,.85)}.hero-v2__linhas{color:var(--texto-suave);font-size:1rem;line-height:1.8;margin-bottom:30px}.hero-v2__linhas strong{color:var(--branco);font-weight:700}.hero-v2__nota{position:absolute;z-index:3;font-family:var(--fonte-script);font-size:clamp(1.1rem,2vw,1.7rem);color:var(--branco);white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,.9)}.hero-v2__nota--1{right:5%;bottom:22%}.hero-v2__nota--2{right:16%;bottom:13%;color:var(--dourado)}.fita{position:absolute;top:calc(var(--header-h) + 42px);right:-28px;z-index:4;margin:0;padding:12px 72px 12px 44px;background:var(--dourado);color:var(--preto);border:3px solid var(--preto);border-right:0;transform:rotate(-3deg) skewX(-12deg);transform-origin:right center}.fita span{display:block;font-family:var(--fonte-script);font-size:1.45rem;font-weight:700;line-height:1;white-space:nowrap;transform:skewX(12deg)}.fita__lista{position:absolute;top:calc(var(--header-h) + 108px);right:34px;z-index:4;text-align:right;display:grid;gap:4px;font-size:.92rem;color:var(--texto-suave)}.social-rail{position:absolute;left:clamp(16px,2vw,48px);bottom:72px;z-index:5;display:grid;justify-items:start;gap:16px}.social-rail a{width:40px;height:40px;margin-left:-10px;display:flex;align-items:center;justify-content:center;color:var(--branco);opacity:.8;transition:var(--transicao)}.topo-pagina{position:relative;padding:calc(var(--header-h) + 80px) 0 80px;text-align:center;overflow:hidden;border-bottom:3px solid var(--vermelho)}.topo-pagina__fundo{position:absolute;inset:0;border:none;border-radius:0;opacity:.3}.topo-pagina__inner{position:relative;z-index:2}.topo-pagina h1{margin-bottom:10px}.topo-pagina p{color:var(--texto-suave);max-width:560px;margin-inline:auto}.migalhas{display:flex;justify-content:center;gap:10px;margin-top:20px;font-size:.76rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--texto-fraco)}.migalhas span{color:var(--vermelho-texto)}.overlay{position:fixed;inset:0;z-index:190;background:rgba(0,0,0,.7);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:var(--transicao)}.overlay.ativo{opacity:1;visibility:visible}.carrinho{position:fixed;top:0;right:0;z-index:200;width:min(420px,100%);height:100%;display:flex;flex-direction:column;background:var(--preto-2);border-left:3px solid var(--vermelho);transform:translateX(100%);transition:transform .35s ease}.carrinho.aberto{transform:none}.toast{position:fixed;bottom:28px;left:50%;z-index:300;transform:translate(-50%,130%)}.secao--escura{background:var(--preto-2)}.secao--vermelha{background:var(--vermelho)}.titulo-secao{text-align:center;margin-bottom:56px}.titulo-secao .selo{display:inline-block;font-family:var(--fonte-texto);font-weight:800;font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:var(--dourado);margin-bottom:12px}.titulo-secao h2{margin-bottom:.3em}.titulo-secao h2 em{font-style:normal;color:var(--vermelho)}.titulo-secao p{color:var(--texto-suave);max-width:560px;margin-inline:auto}.titulo-secao::after{content:'';display:block;width:72px;height:4px;margin:22px auto 0;background:var(--vermelho);border-radius:2px}.revelar{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.revelar.visivel{opacity:1;transform:none}@media (max-width:1360px){.hero-v2 .container{padding-left:80px}}@media (max-width:1024px){.secao{padding:72px 0}.hero-v2{padding-bottom:110px}.hero-v2__inner{grid-template-columns:1fr;gap:24px}.fita,.fita__lista{display:none}.social-rail{bottom:24px}}@media (max-width:860px){.menu-toggle{display:block}.nav{position:fixed;top:var(--header-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 28px;background:rgba(11,11,11,.98);backdrop-filter:blur(12px);border-bottom:3px solid var(--vermelho);transform:translateY(-140%);opacity:0;visibility:hidden;transition:transform .3s ease,opacity .3s ease,visibility .3s}.nav.aberto{transform:none;opacity:1;visibility:visible}.nav__link{padding:16px 0;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.07)}.header .status-loja{display:none}}@media (max-width:640px){:root{--header-h:72px;--gutter:18px}body{font-size:15px}.secao{padding:56px 0}.btn{padding:13px 24px;font-size:.76rem}.topo-pagina{padding:calc(var(--header-h) + 52px) 0 52px}.hero-v2{min-height:88vh;padding:calc(var(--header-h) + 36px) 0 120px}.hero-v2__veu{background:linear-gradient(180deg,rgba(11,11,11,.92) 0%,rgba(11,11,11,.72) 42%,rgba(11,11,11,.55) 62%,rgba(11,11,11,.95) 100%)}.hero-v2__foto{object-position:72% center}.hero-v2__titulo{text-shadow:3px 4px 0 rgba(197,31,40,.85)}.hero-v2__script{display:block;margin:8px 0 0}.hero-v2__nota{display:none}.social-rail{left:10px;gap:8px}.hero-v2 .container{padding-left:54px}}@media (max-width:400px){.logo__sub{letter-spacing:3px}.logo__marca{width:44px;height:44px}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}.carrossel{position:relative;display:flex;align-items:center;gap:18px}.carrossel__seta{flex:none;width:46px;height:46px;display:grid;place-items:center;background:transparent;border:2px solid var(--branco);border-radius:50%;color:var(--branco)}.carrossel__trilho{flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:calc(25% - 18px);gap:24px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.carrossel__trilho::-webkit-scrollbar{display:none}.dia__card{display:flex;flex-direction:column;align-items:center;text-align:center;height:calc(100% - 30px);padding:26px 20px 24px;background:var(--preto-3);border:1px solid rgba(255,255,255,.07);border-radius:14px}.dia__card a{display:block;width:100%;aspect-ratio:4/3;margin-bottom:18px;border-radius:10px;overflow:hidden}.grade-produtos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px}.card{position:relative;display:flex;flex-direction:column;background:var(--preto-3);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);overflow:hidden}.card__midia{position:relative;aspect-ratio:4/3;overflow:hidden}.card__corpo{display:flex;flex-direction:column;flex:1;padding:22px}.produto{display:grid;grid-template-columns:1fr 1fr;gap:48px}.produto__principal{aspect-ratio:4/3;position:relative;overflow:hidden;border-radius:var(--radius)}.foto-produto{width:100%;height:100%;object-fit:cover;background:var(--preto-2)}.estado-vazio{grid-column:1 / -1;padding:48px 20px;text-align:center;color:var(--texto-fraco);font-size:.9rem}.busca{position:relative;max-width:420px;margin:0 auto 32px}.busca input{width:100%;padding:15px 20px 15px 50px;background:var(--preto-3);border:1px solid rgba(255,255,255,.12);border-radius:40px;color:var(--texto);font-family:inherit;font-size:.9rem}.busca svg{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--texto-fraco)}.filtros{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;min-height:42px;margin-bottom:48px}.filtro{padding:11px 26px;background:transparent;color:var(--texto-suave);border:1px solid rgba(255,255,255,.18);border-radius:40px;font-size:.76rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}.esqueleto{display:block;background:rgba(255,255,255,.06);border-radius:6px}.esqueleto--foto{width:100%;aspect-ratio:4/3;margin-bottom:18px;border-radius:10px}.esqueleto--nome{width:60%;height:1.45rem;margin:0 auto 10px}.esqueleto--linha{width:85%;height:.82rem;margin:0 auto 8px}.esqueleto--preco{width:110px;height:44px;margin:18px auto 0;border-radius:6px}.dia--esqueleto .dia__rotulo{min-height:1.2rem}.card--esqueleto .card__midia{background:rgba(255,255,255,.06)}.card--esqueleto .esqueleto--nome{width:70%;margin:0 0 10px}.card--esqueleto .esqueleto--linha{width:100%;margin:0 0 8px}.card--esqueleto .esqueleto--preco{width:90px;height:32px;margin:18px 0 0}@media (max-width:1100px){.carrossel__trilho{grid-auto-columns:calc(33.333% - 16px)}}@media (max-width:1024px){.produto{grid-template-columns:1fr;gap:40px}}@media (max-width:860px){.carrossel__trilho{grid-auto-columns:calc(50% - 12px)}}@media (max-width:640px){.grade-produtos{grid-template-columns:1fr;gap:20px}.carrossel{gap:10px}.carrossel__seta{width:38px;height:38px}.carrossel__trilho{grid-auto-columns:78%;gap:16px}}</style>
+<!-- CRITICO:FIM -->
+
+<link rel="stylesheet" href="css/site.css?v=11" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="css/site.css?v=11"></noscript>
+</head>
+<body>
+
+<a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="/">
+      <img class="logo__marca" src="assets/images/logo.webp" alt="Buck's Burguer" width="52" height="52" decoding="async">
+      <span class="logo__texto">
+        <span class="logo__nome">BUCK'S</span>
+        <span class="logo__sub">Burguer</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Menu principal">
+      <a class="nav__link" href="/">Início</a>
+      <a class="nav__link" href="/cardapio">Cardápio</a>
+      <a class="nav__link" href="/#reservas">Reservas</a>
+      <a class="nav__link" href="/contato">Nós</a>
+    </nav>
+
+    <div class="header__acoes">
+      <p class="status-loja" data-status-loja></p>
+
+      <button class="carrinho-btn" id="carrinhoAbrir" type="button" aria-label="Abrir carrinho">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span class="carrinho-btn__contador" id="carrinhoContador" hidden>0</span>
+      </button>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ HERO ============ -->
+<section class="hero-v2">
+  <img class="hero-v2__foto"
+       src="assets/images/hero-banner.webp"
+       srcset="assets/images/hero-banner-688.webp 688w,
+               assets/images/hero-banner.webp 1376w"
+       sizes="100vw"
+       alt="" width="1376" height="768"
+       fetchpriority="high" decoding="async">
+  <div class="hero-v2__veu" aria-hidden="true"></div>
+
+  <p class="fita"><span>FEITO NA HORA</span></p>
+  <div class="fita__lista">
+    <span>pão com gergelim</span>
+    <span>carne artesanal</span>
+    <span>queijo derretido</span>
+  </div>
+
+  <span class="hero-v2__nota hero-v2__nota--1">sabor de verdade</span>
+  <span class="hero-v2__nota hero-v2__nota--2">feito pra matar a fome</span>
+
+  <div class="social-rail">
+    <a href="#" data-social="instagram" aria-label="Instagram da Buck's Burguer"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+    <a href="#" data-social="whatsapp" aria-label="WhatsApp da Buck's Burguer"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.82 2.42 8.17 8.17 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.84-.85 2.03 0 1.2.87 2.35.99 2.51.12.16 1.71 2.61 4.15 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.05.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg></a>
+  </div>
+
+  <div class="container">
+    <div class="hero-v2__inner">
+      <div>
+        <h1 class="hero-v2__h1">
+          <span class="hero-v2__marca">BUCK'S <span class="hero-v2__script">sabor caseiro</span></span>
+          <span class="hero-v2__titulo">BURGUER</span>
+        </h1>
+        <p class="hero-v2__linhas">
+          <strong>Peça online e retire sem fila.</strong><br>
+          É só passar no balcão e aproveitar.
+        </p>
+        <a class="btn btn--claro" href="/cardapio">Pedir agora</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU DA SEMANA ============ -->
+<section class="semana" aria-labelledby="tituloSemana">
+  <div class="container">
+    <h2 class="semana__titulo" id="tituloSemana">Menu da semana</h2>
+
+    <div class="carrossel">
+      <button class="carrossel__seta" type="button" data-carrossel="anterior" aria-label="Ver itens anteriores">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+
+      <div class="carrossel__trilho" id="trilhoSemana" aria-busy="true" aria-live="polite">
+        <p class="sr-only">Carregando o menu da semana…</p>
+        <div class="dia dia--esqueleto" aria-hidden="true"><span class="dia__rotulo"></span><div class="dia__card"><span class="esqueleto esqueleto--foto"></span><span class="esqueleto esqueleto--nome"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--preco"></span></div></div>
+        <div class="dia dia--esqueleto" aria-hidden="true"><span class="dia__rotulo"></span><div class="dia__card"><span class="esqueleto esqueleto--foto"></span><span class="esqueleto esqueleto--nome"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--preco"></span></div></div>
+        <div class="dia dia--esqueleto" aria-hidden="true"><span class="dia__rotulo"></span><div class="dia__card"><span class="esqueleto esqueleto--foto"></span><span class="esqueleto esqueleto--nome"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--preco"></span></div></div>
+        <div class="dia dia--esqueleto" aria-hidden="true"><span class="dia__rotulo"></span><div class="dia__card"><span class="esqueleto esqueleto--foto"></span><span class="esqueleto esqueleto--nome"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--linha"></span><span class="esqueleto esqueleto--preco"></span></div></div>
+      </div>
+
+      <button class="carrossel__seta" type="button" data-carrossel="proximo" aria-label="Ver próximos itens">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORÁRIOS E LOCALIZAÇÃO ============ -->
+<section class="horarios-sec" aria-labelledby="tituloHorarios">
+  <div class="container">
+    <div class="titulo-risco revelar">
+      <h2 id="tituloHorarios">Horários e Localização</h2>
+    </div>
+
+    <div class="horarios-grade revelar">
+      <div class="horarios-cols">
+        <div class="bloco-info">
+          <h3>Funcionamento</h3>
+          <div data-horarios><p class="dado-indisponivel">Consulte nossos horários pelo WhatsApp.</p></div>
+          <p class="status-loja status-loja--bloco" data-status-loja hidden></p>
+        </div>
+
+        <div class="bloco-info bloco-info--divisor" data-some-sem-endereco>
+          <h3>Estamos em</h3>
+          <p class="endereco-bairro" data-endereco-bairro></p>
+          <p class="endereco-linha dado-indisponivel" data-endereco>Consulte nosso endereço pelo WhatsApp.</p>
+          <a class="endereco-rota" data-mapa-link target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Como chegar<span class="sr-only"> (abre em nova aba)</span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="mapa-card" data-some-sem-endereco hidden>
+        <iframe data-mapa-embed title="Mapa da Buck's Burguer"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVAS ============ -->
+<section class="reservas" id="reservas" aria-labelledby="tituloReservas">
+  <div class="container reservas__inner">
+    <div class="colagem">
+      <img class="colagem__cartaz"
+           src="assets/images/noitedoDate.webp"
+           srcset="assets/images/noitedoDate-360.webp 360w,
+                   assets/images/noitedoDate.webp 720w"
+           sizes="(max-width: 640px) 260px, (max-width: 1024px) 300px, 360px"
+           alt="Noite do Date, toda sexta-feira. Casal por R$ 99,99, mediante reserva."
+           width="720" height="1280" loading="lazy" decoding="async">
+    </div>
+
+    <div class="reservas__texto">
+      <h2 id="tituloReservas">Reservas</h2>
+      <p><strong>Garanta sua mesa e aproveite sem espera!</strong></p>
+      <p>
+        Nosso salão enche rápido, então reserve seu lugar com antecedência.
+        Escolha o dia, o horário e venha curtir com os amigos os melhores
+        hambúrgueres num ambiente confortável e descontraído.
+      </p>
+      <p><strong>Esperamos por você!</strong></p>
+      <a class="btn btn--primario" href="/contato">Reservar mesa</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY ============ -->
+<section class="delivery" aria-labelledby="tituloDelivery">
+  <div class="ph delivery__fundo ph--sem-borda"></div>
+
+  <h2 class="sr-only" id="tituloDelivery">Nosso delivery</h2>
+
+  <div class="container delivery__grade">
+    <div class="vantagem revelar">
+      <div class="vantagem__icone" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <h3>Taxa de entrega</h3>
+      <p data-entrega-aviso>Consulte as condições e a taxa de entrega no atendimento.</p>
+    </div>
+
+    <div class="vantagem revelar">
+      <div class="vantagem__icone" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 15c0-3 2-3.5 2-6S7 6 7 4"/><path d="M12 15c0-3 2-3.5 2-6s-2-3-2-5"/><path d="M17 15c0-3 2-3.5 2-6s-2-3-2-5"/></svg>
+      </div>
+      <h3>Pedido quente</h3>
+      <p>Embalagem térmica para você não precisar requentar nada.</p>
+    </div>
+
+    <div class="vantagem revelar">
+      <div class="vantagem__icone" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="17" r="3"/><circle cx="19" cy="17" r="3"/><path d="M8 17h8"/><path d="M19 17V8h-4l-3 6"/><path d="M5 17 9 6h3"/></svg>
+      </div>
+      <h3>Entrega rápida</h3>
+      <p>Contamos com a melhor equipe de delivery para você.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer-v2">
+  <div class="container">
+    <div class="footer-v2__grade">
+
+      <div>
+        <h2 class="footer-v2__titulo">Contato</h2>
+        <div class="footer-v2__contatos" data-contatos><p class="dado-indisponivel">Canais de contato carregando…</p></div>
+      </div>
+
+      <nav class="footer-v2__links" aria-label="Links do rodapé">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/cardapio">Cardápio</a></li>
+          <li><a href="/#reservas">Reservas</a></li>
+          <li><a href="/contato">Nós</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-v2__info">
+        <div class="bloco-info">
+          <h3>Horários</h3>
+          <div data-horarios><p class="dado-indisponivel">Consulte nossos horários pelo WhatsApp.</p></div>
+        </div>
+        <div class="bloco-info" data-some-sem-endereco>
+          <h3>Estamos em</h3>
+          <p data-endereco class="dado-indisponivel">Consulte nosso endereço pelo WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-v2__base">
+    <div class="container footer-v2__base-inner">
+      <a class="logo" href="/">
+        <img class="logo__marca" src="assets/images/logo.webp" alt="Buck's Burguer" width="52" height="52" decoding="async">
+        <span class="logo__texto">
+          <span class="logo__nome">BUCK'S</span>
+          <span class="logo__sub">Burguer</span>
+        </span>
+      </a>
+      <p>© Copyright <span data-ano>2026</span> — Todos os direitos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CARRINHO ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="carrinho" id="carrinhoDrawer" aria-label="Carrinho de compras">
+  <div class="carrinho__topo">
+    <h2>Seu pedido</h2>
+    <button class="carrinho__fechar" id="carrinhoFechar" type="button" aria-label="Fechar carrinho">×</button>
+  </div>
+
+  <div class="carrinho__lista" id="carrinhoLista"></div>
+
+  <div class="carrinho__rodape">
+    <div class="resumo" id="carrinhoResumo"></div>
+    <p class="carrinho__aviso" id="carrinhoAviso" role="status" hidden></p>
+    <button class="btn btn--primario btn--bloco" id="carrinhoFinalizar" type="button">
+      Finalizar pedido
+    </button>
+    <button class="carrinho__limpar" id="carrinhoLimpar" type="button">
+      Esvaziar carrinho
+    </button>
+
+  </div>
+</aside>
+
+<!-- Ordem obrigatória: config -> regras -> componentes -> telas -->
+<script src="js/config.js?v=11" defer></script>
+<script src="js/loja.js?v=11" defer></script>
+<script src="js/modal.js?v=11" defer></script>
+<script src="js/carrinho.js?v=11" defer></script>
+<script src="js/checkout.js?v=11" defer></script>
+<script src="js/cardapio.js?v=11" defer></script>
+<script src="js/main.js?v=11" defer></script>
+</body>
+</html>

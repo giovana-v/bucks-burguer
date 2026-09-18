@@ -1,0 +1,67 @@
+# ============================================================
+# Cloudflare Pages — cabeçalhos HTTP
+# ============================================================
+# Este arquivo é lido automaticamente pelo Cloudflare Pages.
+# A ordem importa: regras mais específicas depois das gerais.
+# ============================================================
+
+/*
+  # Impede o navegador de "adivinhar" o tipo do arquivo
+  X-Content-Type-Options: nosniff
+  # O site só pode ser embutido em iframe pelo próprio domínio
+  X-Frame-Options: SAMEORIGIN
+  # Não vaza a URL completa para sites externos
+  Referrer-Policy: strict-origin-when-cross-origin
+  # O site não usa nenhuma dessas APIs
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+
+# ---------- HTML: sempre revalida ----------
+# Assim uma correção aparece na próxima visita, sem esperar cache.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ---------- CSS e JS: cache de um ano ----------
+# Estes arquivos SEMPRE são pedidos com ?v=N pelas páginas, e o HTML
+# nunca fica em cache (regra acima). Então a única forma de o
+# navegador pedir css/site.css?v=11 é depois de baixar um HTML
+# novo que aponte para v=10 — o endereço já identifica a versão.
+#
+# "immutable" fecha o ciclo: sem ele, o navegador ainda manda um
+# pedido de revalidação a cada recarga da página, que volta 304 mas
+# custa uma ida à rede. Com ele, nem isso.
+#
+# ATENÇÃO: incremente o ?v=N nas páginas ao editar qualquer CSS ou
+# JS. Sem isso, quem já visitou o site fica um ano com a versão
+# antiga. É a troca que torna o cache longo seguro.
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ---------- Cardápio: cache bem curto ----------
+# Mudança de preço precisa chegar rápido ao cliente.
+/data/*
+  Cache-Control: public, max-age=300
+
+# ---------- Imagens e fontes: cache de um ano ----------
+# Imagem e fonte não mudam de conteúdo sem mudar de nome: trocar a
+# promoção significa subir outro arquivo. Uma semana era um meio-termo
+# desnecessário — quem volta ao site duas semanas depois rebaixava
+# tudo de novo sem que nada tivesse mudado.
+#
+# Se precisar trocar o conteúdo mantendo o nome, suba com outro nome
+# (hero-banner-2.webp) em vez de esperar o cache expirar.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# As fontes vêm de outra origem para o CSS (crossorigin no preload),
+# então precisam do cabeçalho que autoriza esse uso. O cache longo já
+# veio da regra /assets/* acima — repetir o Cache-Control aqui faz o
+# Cloudflare CONCATENAR os dois valores no mesmo cabeçalho, em vez de
+# substituir, e o resultado sai duplicado.
+/assets/fonts/*
+  Access-Control-Allow-Origin: *

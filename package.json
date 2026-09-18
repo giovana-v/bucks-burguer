@@ -1,0 +1,15 @@
+{
+  "name": "bucks-burger",
+  "private": true,
+  "description": "Site da hamburgueria Buck's Burguer. Estático: HTML, CSS e JS puros, sem build. As dependências abaixo são só ferramentas de autoria — nada delas vai para o ar.",
+  "scripts": {
+    "test": "node tests/testes.js",
+    "build": "node ferramentas/construir.js",
+    "fotos": "node ferramentas/preparar-fotos.js",
+    "publicar": "npm run build && npm test && npx wrangler pages deploy public --project-name bucks-burguer --branch main --commit-dirty=true"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0",
+    "wrangler": "^4.0.0"
+  }
+}
